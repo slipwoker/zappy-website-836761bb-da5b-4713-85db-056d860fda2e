@@ -1,0 +1,58 @@
+# מרכז הטניס הישראלי — Generative Engine Optimization Map
+
+> A ספורט וציוד ספורטיבי business.
+
+---
+
+## Pages
+
+### דף הבית
+https://-836761bb.zappy5.app
+גלה את מרכז הטניס הישראלי המוביל המציע ציוד טניס מקצועי, מחבטי טניס לילדים מתחילים ושירותים מקצועיים לשחקני טניס מכל הרמות.
+
+### שירותים
+https://-836761bb.zappy5.app/services
+שירותי מרכז הטניס הישראלי - מיתור מקצועי, התאמת ציוד, ייעוץ מומחה ומגוון רחב של ציוד טניס מקצועי ומחבטי טניס לילדים מתחילים.
+
+### אודות
+https://-836761bb.zappy5.app/about
+הכירו את מרכז הטניס הישראלי - המורשת, הערכים והמחויבות שלנו לספק ציוד טניס מקצועי ושירות ללא פשרות לכל שחקני הטניס בישראל.
+
+### צור קשר
+https://-836761bb.zappy5.app/contact
+צור קשר עם מרכז הטניס הישראלי - נשמח לעזור לך למצוא את ציוד הטניס המקצועי המושלם. פנה אלינו לייעוץ, שאלות או לקביעת פגישה.
+
+## Legal & Policy
+
+### Privacy Policy
+https://-836761bb.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-836761bb.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-836761bb.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About מרכז הטניס הישראלי
+מרכז הטניס הישראלי is a business in the ספורט וציוד ספורטיבי industry.
+
+## Target Audience
+- שחקני טניס נלהבים
+- הורים לילדים מוכשרים בטניס
+
+## Industry
+ספורט וציוד ספורטיבי
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-836761bb.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-836761bb.zappy5.app/robots.txt
