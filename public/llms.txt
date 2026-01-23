@@ -1,6 +1,4 @@
-# מרכז הטניס הישראלי — Generative Engine Optimization Map
-
-> A ספורט וציוד ספורטיבי business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -43,16 +41,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About מרכז הטניס הישראלי
-מרכז הטניס הישראלי is a business in the ספורט וציוד ספורטיבי industry.
-
-## Target Audience
-- שחקני טניס נלהבים
-- הורים לילדים מוכשרים בטניס
-
-## Industry
-ספורט וציוד ספורטיבי
-
+## About Business
 ---
 
 # Additional Resources
