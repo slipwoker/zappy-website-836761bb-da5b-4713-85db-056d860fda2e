@@ -1926,8 +1926,15 @@ body.accessibility-widget-visible ._access-menu {
 /* ========== END RTL MOBILE NAVBAR FIX ========== */
 
 
-/* ========== GRID MOBILE RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
-/* Ensures AI-generated grids with fixed pixel widths are responsive on mobile */
+/* ========== GRID RESPONSIVE FIX (zappy-grid-mobile-fix) ========== */
+/* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
+
+/* DESKTOP: Explicit column grids use CSS variable for grid-template-columns */
+/* This rule reads the --zappy-grid-cols CSS variable set in inline styles */
+[data-zappy-explicit-columns="true"] {
+  display: grid !important;
+  grid-template-columns: var(--zappy-grid-cols, repeat(2, minmax(0, 1fr))) !important;
+}
 
 @media (max-width: 768px) {
   /* Auto-grid (AI-generated) grids - force single column on mobile */
@@ -1950,7 +1957,7 @@ body.accessibility-widget-visible ._access-menu {
     max-height: 300px !important;
   }
   
-  /* Explicit column grids - force single column on mobile */
+  /* MOBILE: Explicit column grids - force single column on mobile */
   [data-zappy-explicit-columns="true"] {
     grid-template-columns: 1fr !important;
   }
@@ -1961,4 +1968,4 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
-/* ========== END GRID MOBILE RESPONSIVE FIX ========== */
+/* ========== END GRID RESPONSIVE FIX ========== */
