@@ -768,13 +768,18 @@ window.onload = function() {
 
           // Apply transform to last-row items
           // Temporarily disable CSS transitions to prevent visible animation
+          // Preserve any existing transforms (e.g., scale, rotate) by composing
           var startIndex = totalItems - itemsInLastRow;
           var savedTransitions = [];
           for (var i = startIndex; i < totalItems; i++) {
             var item = items[i];
             savedTransitions.push(item.style.transition);
             item.style.transition = 'none';
-            item.style.transform = 'translateX(' + translateValue + 'px)';
+            var existingTransform = item.style.transform || '';
+            var newTransform = existingTransform
+              ? existingTransform + ' translateX(' + translateValue + 'px)'
+              : 'translateX(' + translateValue + 'px)';
+            item.style.transform = newTransform;
           }
 
           // Force synchronous reflow so the transform is applied instantly
