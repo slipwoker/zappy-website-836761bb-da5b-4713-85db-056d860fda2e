@@ -724,6 +724,9 @@ window.onload = function() {
       for (var g = 0; g < grids.length; g++) {
         try {
           var container = grids[g];
+          // Skip if already processed
+          if (container.getAttribute('data-zappy-grid-centered') === 'true') continue;
+
           var items = [];
           for (var c = 0; c < container.children.length; c++) {
             var ch = container.children[c];
@@ -754,7 +757,7 @@ window.onload = function() {
           var offset = missingCols * (colWidth + gap) / 2;
 
           // Detect RTL
-          var dir = window.getComputedStyle(container).direction || 'ltr';
+          var dir = cs.direction || 'ltr';
           var el = container;
           while (el && dir === 'ltr') {
             if (el.getAttribute && el.getAttribute('dir')) { dir = el.getAttribute('dir'); break; }
@@ -763,24 +766,36 @@ window.onload = function() {
           }
           var translateValue = dir === 'rtl' ? -offset : offset;
 
+          // Apply transform to last-row items
+          // Temporarily disable CSS transitions to prevent visible animation
           var startIndex = totalItems - itemsInLastRow;
+          var savedTransitions = [];
           for (var i = startIndex; i < totalItems; i++) {
             var item = items[i];
-            var existing = item.style.transform || '';
-            var newTransform = existing ? existing + ' translateX(' + translateValue + 'px)' : 'translateX(' + translateValue + 'px)';
-            item.style.transform = newTransform;
+            savedTransitions.push(item.style.transition);
+            item.style.transition = 'none';
+            item.style.transform = 'translateX(' + translateValue + 'px)';
           }
+
+          // Force synchronous reflow so the transform is applied instantly
+          void container.offsetHeight;
+
+          // Restore original transitions
+          for (var j = startIndex; j < totalItems; j++) {
+            items[j].style.transition = savedTransitions[j - startIndex];
+          }
+
+          // Mark grid as processed so we don't double-apply
+          container.setAttribute('data-zappy-grid-centered', 'true');
         } catch(e) {}
       }
     }
 
-    // Run after DOM is ready and fonts/images have loaded
+    // Run once after DOM is fully loaded (fonts, images, layout complete)
     if (document.readyState === 'complete') {
       centerPartialGridRows();
     } else {
       window.addEventListener('load', centerPartialGridRows);
     }
-    // Also run after a short delay for safety (dynamic content)
-    setTimeout(centerPartialGridRows, 500);
   } catch(e) {}
 })();
