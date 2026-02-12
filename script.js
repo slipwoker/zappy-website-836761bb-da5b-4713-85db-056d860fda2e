@@ -711,3 +711,76 @@ window.onload = function() {
   } catch (e) {}
 })();
 /* END ZAPPY_FAQ_ACCORDION_TOGGLE */
+
+
+/* ZAPPY_PUBLISHED_GRID_CENTERING */
+(function(){
+  try {
+    if (window.__zappyGridCenteringInit) return;
+    window.__zappyGridCenteringInit = true;
+
+    function centerPartialGridRows() {
+      var grids = document.querySelectorAll('[data-zappy-explicit-columns="true"], [data-zappy-auto-grid="true"]');
+      for (var g = 0; g < grids.length; g++) {
+        try {
+          var container = grids[g];
+          var items = [];
+          for (var c = 0; c < container.children.length; c++) {
+            var ch = container.children[c];
+            if (!ch || !ch.tagName) continue;
+            var tag = ch.tagName.toLowerCase();
+            if (tag === 'script' || tag === 'style') continue;
+            items.push(ch);
+          }
+          var totalItems = items.length;
+          if (totalItems === 0) continue;
+
+          var cs = window.getComputedStyle(container);
+          if (cs.display !== 'grid') continue;
+          var gtc = (cs.gridTemplateColumns || '').trim();
+          if (!gtc || gtc === 'none') continue;
+          var colWidths = gtc.split(' ').filter(function(v) { return v && parseFloat(v) > 0; });
+          var colCount = colWidths.length;
+          if (colCount <= 1) continue;
+
+          var itemsInLastRow = totalItems % colCount;
+          if (itemsInLastRow === 0) continue;
+
+          var colWidth = parseFloat(colWidths[0]) || 0;
+          var gap = parseFloat(cs.columnGap);
+          if (isNaN(gap)) gap = parseFloat(cs.gap) || 0;
+
+          var missingCols = colCount - itemsInLastRow;
+          var offset = missingCols * (colWidth + gap) / 2;
+
+          // Detect RTL
+          var dir = window.getComputedStyle(container).direction || 'ltr';
+          var el = container;
+          while (el && dir === 'ltr') {
+            if (el.getAttribute && el.getAttribute('dir')) { dir = el.getAttribute('dir'); break; }
+            if (el.style && el.style.direction) { dir = el.style.direction; break; }
+            el = el.parentElement;
+          }
+          var translateValue = dir === 'rtl' ? -offset : offset;
+
+          var startIndex = totalItems - itemsInLastRow;
+          for (var i = startIndex; i < totalItems; i++) {
+            var item = items[i];
+            var existing = item.style.transform || '';
+            var newTransform = existing ? existing + ' translateX(' + translateValue + 'px)' : 'translateX(' + translateValue + 'px)';
+            item.style.transform = newTransform;
+          }
+        } catch(e) {}
+      }
+    }
+
+    // Run after DOM is ready and fonts/images have loaded
+    if (document.readyState === 'complete') {
+      centerPartialGridRows();
+    } else {
+      window.addEventListener('load', centerPartialGridRows);
+    }
+    // Also run after a short delay for safety (dynamic content)
+    setTimeout(centerPartialGridRows, 500);
+  } catch(e) {}
+})();
