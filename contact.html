@@ -655,7 +655,66 @@ html[dir="rtl"] body {
 }
 
 </style>
-<!-- Zappy Analytics -->
+<style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -958,7 +1017,7 @@ html[dir="rtl"] body {
       <ul class="nav-menu" id="navMenu">
         <li><a href="/services" data-i18n="contact_nav_58">שירותים</a></li>
         <li><a href="/about" data-i18n="contact_nav_59">אודות</a></li>
-      </ul>
+      <li><a href="/blog" class="nav-link" data-i18n="new_a_140">בלוג</a><ul class="sub-menu"><li><a href="/blog/beginners-guide" class="nav-link" data-i18n="new_a_141">למתחילים</a></li><li><a href="/blog/maintenance-tips" class="nav-link" data-i18n="new_a_142">תחזוקה</a></li><li><a href="/blog/pro-vs-amateur" class="nav-link" data-i18n="new_a_143">מקצועי</a></li><li><a href="/blog/tennis-shoes-guide" class="nav-link" data-i18n="new_a_250">בחירת נעלי טניס</a></li></ul></li></ul>
       
       
 <div class="lang-switcher" data-no-icon-edit="true" data-icon-color="currentColor" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
@@ -1270,6 +1329,10 @@ html[dir="rtl"] body {
 
 
 
+
+
+
+
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
@@ -1312,12 +1375,119 @@ html[dir="rtl"] body {
       "home_p_46": "נוצר באמצעות&nbsp;Zappy",
       "new_a_113": "לחץ כאן",
       "new_a_114": "לחץ כאן",
+      "new_a_128": "בלוג",
+      "new_a_129": "למתחילים",
+      "new_a_130": "תחזוקה",
+      "new_a_131": "מקצועי",
+      "new_a_132": "בלוג",
+      "new_a_133": "למתחילים",
+      "new_a_134": "תחזוקה",
+      "new_a_135": "מקצועי",
+      "new_a_136": "בלוג",
+      "new_a_137": "למתחילים",
+      "new_a_138": "תחזוקה",
+      "new_a_139": "מקצועי",
+      "new_a_140": "בלוג",
+      "new_a_141": "למתחילים",
+      "new_a_142": "תחזוקה",
+      "new_a_143": "מקצועי",
+      "new_a_144": "בלוג",
+      "new_a_145": "למתחילים",
+      "new_a_146": "תחזוקה",
+      "new_a_147": "מקצועי",
+      "new_a_148": "בלוג",
+      "new_a_149": "למתחילים",
+      "new_a_150": "תחזוקה",
+      "new_a_151": "מקצועי",
+      "new_a_152": "בלוג",
+      "new_a_153": "למתחילים",
+      "new_a_154": "תחזוקה",
+      "new_a_155": "מקצועי",
+      "new_a_156": "בלוג",
+      "new_a_157": "למתחילים",
+      "new_a_158": "תחזוקה",
+      "new_a_159": "מקצועי",
+      "new_a_165": "קרא עוד ←",
+      "new_a_169": "קרא עוד ←",
+      "new_a_173": "קרא עוד ←",
+      "new_a_176": "בלוג",
+      "new_a_177": "למתחילים",
+      "new_a_178": "תחזוקה",
+      "new_a_179": "מקצועי",
+      "new_a_180": "← חזרה לבלוג",
+      "new_a_199": "← חזרה לבלוג",
+      "new_a_200": "בלוג",
+      "new_a_201": "למתחילים",
+      "new_a_202": "תחזוקה",
+      "new_a_203": "מקצועי",
+      "new_a_204": "← חזרה לבלוג",
+      "new_a_223": "← חזרה לבלוג",
+      "new_a_224": "בלוג",
+      "new_a_225": "למתחילים",
+      "new_a_226": "תחזוקה",
+      "new_a_227": "מקצועי",
+      "new_a_228": "← חזרה לבלוג",
+      "new_a_246": "← חזרה לבלוג",
+      "new_a_247": "בחירת נעלי טניס",
+      "new_a_248": "בחירת נעלי טניס",
+      "new_a_249": "בחירת נעלי טניס",
+      "new_a_250": "בחירת נעלי טניס",
+      "new_a_251": "בחירת נעלי טניס",
+      "new_a_252": "בחירת נעלי טניס",
+      "new_a_253": "בחירת נעלי טניס",
+      "new_a_254": "בחירת נעלי טניס",
+      "new_a_255": "בחירת נעלי טניס",
+      "new_a_256": "בחירת נעלי טניס",
+      "new_a_257": "בחירת נעלי טניס",
+      "new_a_258": "בחירת נעלי טניס",
       "new_p_116": "טקסט כאן",
       "new_p_118": "מוביל את החברה עם ניסיון עשיר בניהול פרויקטים מורכבים, ומלווה חברות מכשור רפואי במעבר מפיתוח לייצור ובייצוב מוצרים קיימים. מומחה לחיבור מעשי בין הנדסה, איכות ורגולציה, בדגש על יעילות, עמידה בלוחות זמנים וקבלת החלטות Risk-Based",
       "new_p_120": "מומחית לאיכות ורגולציה במכשור רפואי, המסייעת לחברות MedTech וסטארטאפים להשיג עמידה ב-ISO 13485, FDA, MDR ו-GMP בצורה יעילה ובטוחה. עם ניסיון של כ-20 שנה, היא מספקת פתרונות QA/RA מקצה לקצה החל מאסטרטגיה רגולטורית ו-QMS, דרך אודיטים וניהול סיכונים, ועד ליווי מלא מהקונספט ועד מסחור.",
       "new_p_122": "מובילת איכות במכשור רפואי, מומחית ל QA, ולידציה וניתוח סיכונים, עם אוריינטציה חזקה ל Regulatory Compliance ולבניית מערכות איכות סקיילביליות.מפתחת תשתיות איכות חכמות שמפשטות תהליכים באמצעות AI וכלי No Code, וממירות מורכבות לבהירות תפעולית שמקדמת ביצועים וערך עסקי.",
       "new_p_124": "מובילת איכות במכשור רפואי, מומחית ל QA, ולידציה וניתוח סיכונים, עם אוריינטציה חזקה ל Regulatory Compliance ולבניית מערכות איכות סקיילביליות.מפתחת תשתיות איכות חכמות שמפשטות תהליכים באמצעות AI וכלי No Code, וממירות מורכבות לבהירות תפעולית שמקדמת ביצועים וערך עסקי.",
       "new_p_126": "Senior Component Engineer המספקת תמיכה מקצועית ל R&amp;D, הנדסה, רכש ושיווק. תוך הקמה ותחזוקה של מאגר נתוני רכיבים וניהול תהליך אישור רכיבים חדשים. היא מובילה סטנדרטיזציה ובחירת רכיבים, הגדרת מקורות חלופיים, בהתאם לתוכנית ניהול רכיבים המבוססת על תקנים רפואיים, צבאיים תעשייתיים ו ISO",
+      "new_p_161": "כל המידע, הטיפים והחידושים מעולם הטניס במקום אחד. המדריכים המקצועיים של מרכז הטניס הישראלי כאן בשבילכם.",
+      "new_p_164": "המדריך המלא לבחירת נעלי טניס מתאימות. למדו על התאמה למשטח, מבנה כף הרגל וחשיבות היציבות. מוגש על ידי מומחי מרכז הטניס הישראלי....",
+      "new_p_168": "איך להאריך את חיי המחבט והגידים? טיפים חשובים לתחזוקה נכונה שיחסכו לכם כסף וישפרו את הביצועים במגרש.",
+      "new_p_172": "מה באמת ההבדל בין מחבט של 200 ש\"ח למחבט של 1000 ש\"ח? סקירה מעמיקה על טכנולוגיות וחומרים במרכז הטניס הישראלי.",
+      "new_p_175": "צוות מרכז הטניס הישראלי זמין לכל שאלה. בואו לבקר בחנות או צרו איתנו קשר לייעוץ אישי והתאמת ציוד.",
+      "new_p_185": "ההחלטה להיכנס לעולם הטניס היא החלטה מרגשת. זהו ספורט המשלב כושר גופני, חשיבה אסטרטגית והנאה רבה. עם זאת, הרגע שבו אתם נכנסים אל חנות ציוד טניס בישראל ועומדים מול קיר מלא במחבטים צבעוניים ושונים יכול להיות מבלבל מאוד. האם לבחור במחבט הכי יקר? האם המותג משנה? ומה המשמעות של כל המספרים הקטנים המודפסים על המסגרת?",
+      "new_p_186": "במרכז הטניס הישראלי, אנחנו מאמינים שהציוד הנכון הוא המפתח להתקדמות מהירה ולהנאה מהמשחק. מחבט שאינו מתאים עלול לא רק לפגוע ביכולת המשחק שלכם, אלא אפילו לגרום לפציעות מיותרות. במדריך זה נפרק את תהליך הבחירה לגורמים פשוטים שיעזרו לכם לקבל את ההחלטה הנכונה.",
+      "new_p_188": "אחת הטעויות הנפוצות של שחקנים מתחילים היא המחשבה שמחבט קל כנוצה הוא הבחירה האידיאלית. אמנם מחבט קל (מתחת ל-270 גרם) מאפשר תנועה מהירה וקלה יותר של היד, אך הוא גם מעביר זעזועים חזקים יותר לזרוע בעת הפגיעה בכדור. עבור שחקן מתחיל מבוגר, ההמלצה היא בדרך כלל לבחור מחבט במשקל בינוני, הנע בין 270 ל-300 גרם.",
+      "new_p_189": "משקל זה מספק יציבות טובה יותר בעת החבטה, עוזר לייצר עוצמה טבעית מבלי להפעיל מאמץ יתר על השרירים, ועדיין מאפשר שליטה טובה בתנועה. אם אתם רוכשים מחבט עבור ילד או נער, המשקלים יהיו כמובן נמוכים יותר, ומומלץ להתייעץ עם המומחים שלנו בחנות.",
+      "new_p_191": "גודל ראש המחבט נמדד באינצ'ים מרובעים. למתחילים, מילת המפתח היא \"סלחנות\". ככל שראש המחבט גדול יותר, כך גדלה גם נקודת ה\"סוויט ספוט\" (Sweet Spot) - האזור במרכז הגידים שבו הפגיעה בכדור היא האופטימלית ביותר. כאשר אנחנו רק לומדים את הטכניקה, אנחנו לא תמיד פוגעים במרכז המחבט בדיוק מושלם.",
+      "new_p_192": "לכן, מומלץ לבחור במחבט עם ראש בגודל של 100 אינץ' מרובע ומעלה (עד 110 אינץ'). ראש גדול יותר יעזור לכם להעביר את הכדור לצד השני של הרשת גם כאשר החבטה אינה מושלמת, ויעניק לכם ביטחון רב יותר במשחק הראשוני שלכם.",
+      "new_p_194": "פרמטר קריטי שלעיתים נזנח הוא עובי הידית (Grip Size). ידית עבה מדי או דקה מדי תגרום לכם לאמץ את שרירי האמה יתר על המידה, מה שעלול להוביל לדלקות וכאבים (כמו \"מרפק טניס\"). המידות מסומנות בדרך כלל במספרים מ-0 עד 5.",
+      "new_p_195": "כלל אצבע פשוט לבדיקה: אחזו במחבט כאילו אתם לוחצים יד. במרווח שנוצר בין קצות האצבעות לכרית כף היד, צריכה להיכנס בדיוק אצבע אחת של היד השנייה. אם המרווח גדול מדי, הידית עבה מדי; אם אין מקום לאצבע, הידית דקה מדי. במרכז הטניס הישראלי נוכל למדוד את כף ידכם ולהתאים לכם את המידה המדויקת.",
+      "new_p_197": "בחירת המחבט הראשון היא הצעד הראשון שלכם בעולם הטניס. אל תתפתו לקנות את המחבט היקר ביותר או זה ששחקן מפורסם משחק איתו בטלוויזיה. התמקדו בנוחות, במשקל מתאים ובגודל ראש שיאפשר לכם ללמוד וליהנות. אנחנו מזמינים אתכם להגיע אלינו, להרגיש את המחבטים ביד ולקבל ייעוץ אישי ומקצועי.",
+      "new_p_209": "ציוד טניס איכותי הוא השקעה כספית לא מבוטלת. בין אם אתם שחקנים חובבים או מקצוענים, המחבט, הנעליים והתיק שלכם הם הכלים שמאפשרים לכם לשחק ולהצליח. רבים מהלקוחות שמגיעים אל מרכז הטניס הישראלי שואלים אותנו כיצד ניתן להאריך את חיי הציוד ולשמור על הביצועים שלו לאורך זמן. התשובה טמונה בתחזוקה שוטפת ובתשומת לב לפרטים הקטנים.",
+      "new_p_210": "במאמר זה ריכזנו עבורכם מספר טיפים חיוניים שיעזרו לכם לשמור על הציוד שלכם במצב מצוין, לחסוך כסף על החלפות תכופות ולהבטיח שתמיד תעלו למגרש עם הכלים הטובים ביותר.",
+      "new_p_212": "אויב מספר אחד של ציוד טניס, ובמיוחד של הגידים והמסגרת, הוא החום. השארת המחבט ברכב ביום קיץ ישראלי חם היא מתכון לאסון. החום הכבד גורם למסגרת המחבט (שעשויה לרוב מגרפיט וחומרים מרוכבים) להתרחב ולהתעוות במיקרו-רמות, ולגידים לאבד את המתח (Tension) שלהם במהירות. התוצאה היא מחבט שמרגיש \"מת\" ופחות רספונסיבי.",
+      "new_p_213": "ההמלצה שלנו: קחו את התיק איתכם תמיד. אל תשאירו אותו בתא המטען. בבית, אחסנו את הציוד במקום מוצל וקריר. שימוש בתיק טניס מבודד (עם בטנה תרמית) יכול לסייע בהגנה על הציוד בדרככם למגרש וממנו.",
+      "new_p_215": "הגריפ הוא נקודת המגע היחידה שלכם עם המחבט. גריפ שחוק, מלוכלך או מחליק לא רק פוגע במשחק שלכם אלא גם מאלץ אתכם לאחוז במחבט חזק מדי, מה שמוביל לעייפות בשרירי האמה ולפציעות. אין צורך לחכות שהגריפ יתפורר לחלוטין. ברגע שאתם מרגישים שהאחיזה אינה יציבה או שהגריפ אינו סופג זיעה כראוי - החליפו אותו.",
+      "new_p_216": "מומלץ להשתמש ב-Overgrip (סרט אחיזה עליון) דק וזול שניתן להחליף בתדירות גבוהה, ובכך לשמור על הגריפ הבסיסי של המחבט לאורך שנים. בחנות ציוד טניס בישראל תוכלו למצוא מגוון סוגי גריפים בעוביים ובמרקמים שונים.",
+      "new_p_218": "שחקנים רבים מחליפים גידים רק כשהם נקרעים. זו טעות. גידים מאבדים את הגמישות והמתח שלהם (Tension Loss) הרבה לפני שהם נקרעים פיזית. גידים \"מתים\" מעבירים יותר זעזועים ליד ופוגעים בשליטה בכדור. כלל אצבע נפוץ הוא להחליף גידים כמספר הפעמים שאתם משחקים בשבוע (לדוגמה, אם אתם משחקים 3 פעמים בשבוע, החליפו גידים 3 פעמים בשנה).",
+      "new_p_219": "במרכז הטניס הישראלי אנו מציעים שירות שזירה מקצועי שיחזיר למחבט שלכם את החיות והעוצמה שאבדה לו. אל תזניחו את הגידים – הם המנוע של המחבט שלכם.",
+      "new_p_221": "טיפול נכון בציוד הוא חלק בלתי נפרד מהיותכם שחקני טניס. שמירה על המחבט, החלפת גריפים בזמן והגנה מפני השמש יבטיחו לכם ביצועים טובים יותר וחיסכון כספי לאורך זמן. יש לכם שאלות נוספות על תחזוקה? הצוות שלנו תמיד כאן לשירותכם.",
+      "new_p_233": "כשנכנסים לחנות ספורט, קל להתבלבל מהמגוון העצום של המחירים. מדוע מחבט אחד עולה 250 ש\"ח ואחר, שנראה דומה למדי, עולה 1,200 ש\"ח? האם מדובר רק במיתוג ושיווק, או שיש הבדלים מהותיים שישפיעו על המשחק שלכם? במרכז הטניס הישראלי, אנחנו מאמינים שחשוב שהלקוח יבין בדיוק על מה הוא משלם.",
+      "new_p_234": "ההבדלים בין ציוד חובבני (Recreational) לציוד מקצועי (Performance) הם משמעותיים ונוגעים לחומרים, לטכנולוגיית הייצור ולרמת הדיוק. בואו נצלול לעומק ונבין את ההבדלים העיקריים.",
+      "new_p_236": "ההבדל המשמעותי ביותר הוא החומר ממנו עשוי המחבט. מחבטים זולים למתחילים עשויים לרוב מאלומיניום או מסגסוגת פשוטה. אלו מחבטים עמידים מאוד וזולים לייצור, אך הם מעבירים זעזועים חזקים ליד, כבדים יותר באופן יחסי, וחסרי \"רגש\". הם מצוינים לילדים שרק מתחילים או למי שמשחק פעם בחודש.",
+      "new_p_237": "לעומת זאת, מחבטים מקצועיים עשויים מסיבי פחמן (גרפיט) וחומרים מרוכבים מתקדמים (כמו Graphene, Kevlar ועוד). חומרים אלו קלים וחזקים להפליא. הם מאפשרים ליצרנים לשלוט בדיוק רב על רמת הקשיחות והגמישות של המחבט באזורים שונים, מה שמעניק לשחקן עוצמה, שליטה וספיגת זעזועים ברמה אחרת לגמרי.",
+      "new_p_239": "בציוד מקצועי מושקע מחקר ופיתוח רב. הטכנולוגיות החדשות נועדו לשפר את היציבות של המחבט בזמן הפגיעה בכדור. כאשר כדור טניס פוגע במחבט במהירות גבוהה, המחבט נוטה להסתובב ביד (מומנט פיתול). מחבטים מקצועיים מתוכננים להתנגד לפיתול הזה, מה שמאפשר חבטות מדויקות יותר גם כשהפגיעה אינה במרכז המחבט.",
+      "new_p_240": "בנוסף, מערכות השיכוך במחבטים מקצועיים מובנות בתוך הידית והמסגרת, ומגנות על המפרקים של השחקן לאורך זמן. עבור שחקן שמשחק מספר פעמים בשבוע, ההגנה הזו היא קריטית למניעת פציעות.",
+      "new_p_242": "התשובה תלויה בתדירות המשחק ובמטרות שלכם. אם אתם משחקים פעם בשבועיים בשביל הכיף, מחבט ביניים יעשה עבודה מצוינת. אך אם אתם מתכננים לשחק באופן קבוע, לקחת שיעורים ולהשתפר, ההשקעה בציוד מקצועי (או לפחות בציוד \"Club Player\" איכותי) היא משתלמת. הציוד יחזיק מעמד זמן רב יותר, יגן על הגוף שלכם ויאפשר לכם למצות את הפוטנציאל שלכם.",
+      "new_p_244": "ההבדל בין הציוד הוא לא רק במחיר, אלא בחוויית המשחק הכוללת. אנחנו מזמינים אתכם להגיע לחנות שלנו, להתייעץ עם המומחים, ואולי אפילו לקחת מחבט דמו לניסיון. רק כשתרגישו את ההבדל בידיים, תבינו עד כמה הציוד הנכון יכול לשדרג את המשחק שלכם.",
+      "new_p_262": "טניס הוא אחד הספורטים הדינמיים ביותר שיש. המשחק דורש תנועות חדות, עצירות פתאומיות, זינוקים לצדדים וריצות ספרינט קצרות. בתוך כל הפעילות האינטנסיבית הזו, הציוד החשוב ביותר שמגן על הגוף שלכם הוא לא המחבט, אלא הנעליים. במרכז הטניס הישראלי אנו פוגשים מדי יום שחקנים שמשקיעים הון במחבטים, אך מזניחים את בחירת הנעליים – טעות שיכולה להוביל לפציעות ולפגיעה בביצועים.",
+      "new_p_263": "בחירת נעל טניס נכונה היא קריטית ליציבות על המגרש, למניעת נקעים ולשמירה על הברכיים והגב. בין אם אתם שחקנים מתחילים או מקצוענים, המדריך הבא יעזור לכם להבין מה לחפש כשאתם נכנסים אל חנות ציוד טניס בישראל.",
+      "new_p_265": "הפרמטר הראשון והחשוב ביותר בבחירת נעל הוא סוג המגרש עליו אתם משחקים ברוב הזמן. לכל משטח יש דרישות שונות מהסוליה:",
+      "new_p_270": "כשאתם מבקרים במרכז הטניס הישראלי או בכל חנות מקצועית, תבחינו שנעלי טניס מתחלקות לרוב לשתי קטגוריות עיקריות: נעליים המתמקדות ביציבות ונעליים המתמקדות במהירות.",
+      "new_p_271": "נעלי יציבות (Stability): לרוב יהיו כבדות יותר ומסיביות. הן מיועדות לשחקנים שזקוקים לתמיכה מקסימלית בקרסול, או לשחקנים פיזיים וחזקים שזזים הרבה על קו הבסיס. הן מספקות ביטחון רב בתנועות צדדיות.",
+      "new_p_272": "נעלי מהירות (Speed): נעליים קלות משקל, גמישות יותר ומאווררות. הן מתאימות לשחקנים שרוצים להרגיש \"קרובים למגרש\" ולנוע במהירות שיא. החיסרון הוא שלעיתים הן נשחקות מהר יותר ומספקות פחות תמיכה בקרסול.",
+      "new_p_274": "רבים טועים וקונים נעלי טניס במידה זהה לנעלי ההליכה שלהם. בטניס, הרגל נוטה להתנפח מעט במהלך המשחק, והתנועות כוללות בלימות חזקות. לכן, כלל האצבע (תרתי משמע) הוא להשאיר רווח של כחצי סנטימטר עד סנטימטר בין הבוהן לקצה הנעל.",
+      "new_p_275": "אם האצבעות שלכם נוגעות בקצה הנעל בזמן מדידה בחנות, זה יכאב מאוד בזמן משחק. בנוסף, חשוב לשים לב לרוחב הנעל. מותגים שונים מייצרים אימומים ברוחב שונה. אל תתפשרו על נעל לוחצת מתוך תקווה שהיא תתרחב – נעל טניס צריכה להיות נוחה מהרגע הראשון.",
+      "new_p_277": "ציוד טניס מקצועי נועד להחזיק מעמד, אך לכל נעל יש תאריך תפוגה. סימנים מובהקים להחלפה כוללים שחיקה של הסוליה עד כדי היעלמות החריצים (מה שגורם להחלקה מסוכנת), או כאשר אתם מרגישים שהנעל איבדה את יכולת בלימת הזעזועים שלה והברכיים מתחילות לכאוב אחרי אימון.",
+      "new_p_278": "שחקן ממוצע המשחק פעמיים בשבוע יצטרך להחליף נעליים כל 4-6 חודשים. שחקנים תחרותיים מחליפים בתדירות גבוהה הרבה יותר.",
+      "new_p_280": "הרגליים שלכם הן הכלי החשוב ביותר על המגרש. אל תזלזלו בבחירת הנעל. אנו מזמינים אתכם להגיע אל חנות ציוד טניס בישראל במתחם שלנו, להתייעץ עם המומחים של מרכז הטניס הישראלי, ולמדוד מגוון דגמים כדי למצוא את הזוג המושלם שישפר את המשחק שלכם וישמור על בריאותכם.",
       "about_h1_1": "הסיפור שלנו - מסורת, מצוינות ומחויבות",
       "about_h2_2": "המסע שלנו בעולם הטניס",
       "about_h2_3": "הערכים המנחים אותנו",
@@ -1369,6 +1539,28 @@ html[dir="rtl"] body {
       "home_h3_20": "איכות מובטחת",
       "home_h3_21": "שירות אישי",
       "home_h3_22": "מסורת ומורשת",
+      "new_h1_160": "מגזין הטניס הישראלי",
+      "new_h1_182": "איך לבחור מחבט טניס ראשון: המדריך המלא למתחילים",
+      "new_h1_206": "טיפים לשמירה על ציוד הטניס שלכם לאורך זמן",
+      "new_h1_230": "ציוד חובבני מול ציוד מקצועי: מה באמת ההבדל?",
+      "new_h1_259": "איך לבחור נעלי טניס - המדריך המלא לשחקן",
+      "new_h2_174": "רוצים להתייעץ עם המומחים שלנו?",
+      "new_h2_187": "משקל המחבט: קל יותר הוא לא תמיד טוב יותר",
+      "new_h2_190": "גודל הראש: שטח פגיעה סלחני",
+      "new_h2_193": "מידת הידית: הנוחות בידיים שלכם",
+      "new_h2_196": "סיכום",
+      "new_h2_211": "הגנו על המחבט מטמפרטורות קיצוניות",
+      "new_h2_214": "החלפת גריפ (סרט אחיזה) בזמן",
+      "new_h2_217": "שזירת גידים מחדש",
+      "new_h2_220": "סיכום",
+      "new_h2_235": "החומרים: אלומיניום מול גרפיט",
+      "new_h2_238": "טכנולוגיה ויציבות",
+      "new_h2_241": "האם זה שווה את ההשקעה?",
+      "new_h2_243": "סיכום",
+      "new_h2_264": "1. התאמה לסוג המשטח (Surface)",
+      "new_h2_269": "2. יציבות מול משקל",
+      "new_h2_273": "3. מידה והתאמה לרגל",
+      "new_h2_276": "מתי להחליף נעליים?",
       "new_h3_115": "כותרת משנה",
       "new_h3_117": "נועם אביגדור",
       "new_h3_119": "קטי ברדוגו",
@@ -1376,6 +1568,13 @@ html[dir="rtl"] body {
       "new_h3_123": "הדר פרידמן&nbsp;",
       "new_h3_125": "מיכאל קריניצקי",
       "new_h3_127": "אורית שלום",
+      "new_h3_163": "איך לבחור נעלי טניס - מדריך מקצועי",
+      "new_h3_167": "שמירה על ציוד הטניס לאורך זמן",
+      "new_h3_171": "ציוד חובבני מול ציוד מקצועי",
+      "new_h3_279": "סיכום והמלצה",
+      "new_li_266": "מגרשים קשים (Hard Court): זהו המשטח הנפוץ ביותר בישראל. נעליים למגרשים קשים חייבות להיות עמידות מאוד, עם סוליה חזקה שתעמוד בשחיקה הגבוהה של הבטון והאספלט. הן מספקות ריפוד (cushioning) מצוין לבלימת זעזועים.",
+      "new_li_267": "מגרשי חימר (Clay Court): הסוליה של נעלי חימר מעוצבת בדוגמת \"אדרה\" (זיגזג מלא) כדי למנוע הצטברות של חימר בתוך החריצים ולאפשר החלקה מבוקרת (sliding) אל הכדור.",
+      "new_li_268": "דשא (Grass Court): נדיר יותר בארץ, אך דורש סוליה עם זיזים קטנים לאחיזה מקסימלית על המשטח החלקלק.",
       "terms_h1_1": "תנאי שימוש",
       "terms_h2_2": "1. הגדרות",
       "terms_h2_3": "2. תיאור השירותים",
@@ -1502,6 +1701,23 @@ html[dir="rtl"] body {
       "home_link_51": "נגישות",
       "home_link_52": "תנאי שימוש",
       "home_link_53": "Zappy",
+      "new_span_162": "מדריכים",
+      "new_span_166": "טיפים",
+      "new_span_170": "מקצועי",
+      "new_span_181": "שתף ב:",
+      "new_span_183": "📅 15 באוקטובר 2023",
+      "new_span_184": "⏱️ 4 דקות קריאה",
+      "new_span_198": "שתף ב:",
+      "new_span_205": "שתף ב:",
+      "new_span_207": "📅 22 באוקטובר 2023",
+      "new_span_208": "⏱️ 5 דקות קריאה",
+      "new_span_222": "שתף ב:",
+      "new_span_229": "שתף ב:",
+      "new_span_231": "📅 29 באוקטובר 2023",
+      "new_span_232": "⏱️ 6 דקות קריאה",
+      "new_span_245": "שתף ב:",
+      "new_span_260": "📅 פורסם: 25 במאי 2024",
+      "new_span_261": "⏱️ זמן קריאה: 5 דקות",
       "privacy_h1_1": "מדיניות פרטיות",
       "privacy_h2_2": "1. איסוף מידע",
       "privacy_h2_3": "2. שימוש במידע",
@@ -1963,12 +2179,119 @@ html[dir="rtl"] body {
       "home_p_46": "Created using&nbsp;Zappy",
       "new_a_113": "Click here",
       "new_a_114": "Click here",
+      "new_a_128": "Blog",
+      "new_a_129": "For Beginners",
+      "new_a_130": "Maintenance",
+      "new_a_131": "Professional",
+      "new_a_132": "Blog",
+      "new_a_133": "For Beginners",
+      "new_a_134": "Maintenance",
+      "new_a_135": "Professional",
+      "new_a_136": "Blog",
+      "new_a_137": "For Beginners",
+      "new_a_138": "Maintenance",
+      "new_a_139": "Professional",
+      "new_a_140": "Blog",
+      "new_a_141": "For Beginners",
+      "new_a_142": "Maintenance",
+      "new_a_143": "Professional",
+      "new_a_144": "Blog",
+      "new_a_145": "For Beginners",
+      "new_a_146": "Maintenance",
+      "new_a_147": "Professional",
+      "new_a_148": "Blog",
+      "new_a_149": "For Beginners",
+      "new_a_150": "Maintenance",
+      "new_a_151": "Professional",
+      "new_a_152": "Blog",
+      "new_a_153": "For Beginners",
+      "new_a_154": "Maintenance",
+      "new_a_155": "Professional",
+      "new_a_156": "Blog",
+      "new_a_157": "For Beginners",
+      "new_a_158": "Maintenance",
+      "new_a_159": "Professional",
+      "new_a_165": "Read More ←",
+      "new_a_169": "Read More ←",
+      "new_a_173": "Read More ←",
+      "new_a_176": "Blog",
+      "new_a_177": "For Beginners",
+      "new_a_178": "Maintenance",
+      "new_a_179": "Professional",
+      "new_a_180": "← Back to Blog",
+      "new_a_199": "← Back to Blog",
+      "new_a_200": "Blog",
+      "new_a_201": "For Beginners",
+      "new_a_202": "Maintenance",
+      "new_a_203": "Professional",
+      "new_a_204": "← Back to Blog",
+      "new_a_223": "← Back to Blog",
+      "new_a_224": "Blog",
+      "new_a_225": "For Beginners",
+      "new_a_226": "Maintenance",
+      "new_a_227": "Professional",
+      "new_a_228": "← Back to Blog",
+      "new_a_246": "← Back to Blog",
+      "new_a_247": "Choosing Tennis Shoes",
+      "new_a_248": "Choosing Tennis Shoes",
+      "new_a_249": "Choosing Tennis Shoes",
+      "new_a_250": "Choosing Tennis Shoes",
+      "new_a_251": "Choosing Tennis Shoes",
+      "new_a_252": "Choosing Tennis Shoes",
+      "new_a_253": "Choosing Tennis Shoes",
+      "new_a_254": "Choosing Tennis Shoes",
+      "new_a_255": "Choosing Tennis Shoes",
+      "new_a_256": "Choosing Tennis Shoes",
+      "new_a_257": "Choosing Tennis Shoes",
+      "new_a_258": "Choosing Tennis Shoes",
       "new_p_116": "Text here",
       "new_p_118": "Leads the company with extensive experience in managing complex projects, guiding medical device companies through the transition from development to production and stabilizing existing products. Expert in practical integration between engineering, quality and regulation, with emphasis on efficiency, meeting timelines and Risk-Based decision making",
       "new_p_120": "Expert in quality and regulation for medical devices, helping MedTech companies and startups achieve compliance with ISO 13485, FDA, MDR and GMP efficiently and safely. With approximately 20 years of experience, she provides end-to-end QA/RA solutions from regulatory strategy and QMS, through audits and risk management, to full support from concept to commercialization.",
       "new_p_122": "Quality leader in medical devices, expert in QA, validation and risk analysis, with strong orientation towards Regulatory Compliance and building scalable quality systems. Develops smart quality infrastructures that simplify processes using AI and No Code tools, converting complexity into operational clarity that drives performance and business value.",
       "new_p_124": "Quality leader in medical devices, expert in QA, validation and risk analysis, with strong orientation towards Regulatory Compliance and building scalable quality systems. Develops smart quality infrastructures that simplify processes using AI and No Code tools, converting complexity into operational clarity that drives performance and business value.",
       "new_p_126": "Senior Component Engineer providing professional support to R&D, engineering, procurement and marketing. While establishing and maintaining a component database and managing the approval process for new components. Leading standardization and component selection, defining alternative sources, in accordance with a component management plan based on medical, military, industrial and ISO standards",
+      "new_p_161": "All the information, tips and innovations from the world of tennis in one place. The professional instructors of the Israeli Tennis Center are here for you.",
+      "new_p_164": "The complete guide to choosing suitable tennis shoes. Learn about surface matching, foot structure and the importance of stability. Presented by the experts at the Israeli Tennis Center....",
+      "new_p_168": "How to extend the life of your racket and strings? Important tips for proper maintenance that will save you money and improve your performance on the court.",
+      "new_p_172": "What's really the difference between a 200 NIS racket and a 1000 NIS racket? An in-depth review of technologies and materials at the Israeli Tennis Center.",
+      "new_p_175": "The Israeli Tennis Center team is available for any question. Come visit our store or contact us for personal consultation and equipment fitting.",
+      "new_p_185": "The decision to enter the world of tennis is an exciting one. It's a sport that combines physical fitness, strategic thinking, and great enjoyment. However, the moment you walk into a tennis equipment store in Israel and stand in front of a wall full of colorful and different rackets can be very confusing. Should you choose the most expensive racket? Does the brand matter? And what do all those small numbers printed on the frame mean?",
+      "new_p_186": "At the Israeli Tennis Center, we believe that the right equipment is the key to rapid progress and enjoyment of the game. An unsuitable racket can not only harm your playing ability, but even cause unnecessary injuries. In this guide, we'll break down the selection process into simple factors that will help you make the right decision.",
+      "new_p_188": "One of the common mistakes of beginner players is thinking that a feather-light racket is the ideal choice. While a light racket (under 270 grams) allows for faster and easier hand movement, it also transmits stronger shocks to the arm when hitting the ball. For a beginner adult player, the recommendation is usually to choose a medium-weight racket, ranging between 270 to 300 grams.",
+      "new_p_189": "This weight provides better stability when hitting, helps generate natural power without over-exerting the muscles, and still allows good control of movement. If you're purchasing a racket for a child or teenager, the weights will obviously be lower, and it's recommended to consult with our experts in the store.",
+      "new_p_191": "The racket head size is measured in square inches. For beginners, the keyword is 'forgiveness'. The larger the racket head, the larger the 'Sweet Spot' - the area in the center of the strings where hitting the ball is most optimal. When we're just learning the technique, we don't always hit the center of the racket with perfect precision.",
+      "new_p_192": "Therefore, it's recommended to choose a racket with a head size of 100 square inches and above (up to 110 square inches). A larger head will help you get the ball to the other side of the net even when the hit isn't perfect, and will give you much more confidence in your initial game.",
+      "new_p_194": "A critical parameter that is sometimes neglected is the grip thickness (Grip Size). A grip that's too thick or too thin will cause you to strain your forearm muscles excessively, which can lead to inflammation and pain (like 'tennis elbow'). The sizes are usually marked with numbers from 0 to 5.",
+      "new_p_195": "A simple rule of thumb for checking: hold the racket as if you're shaking hands. In the gap created between your fingertips and palm pad, exactly one finger from your other hand should fit. If the gap is too large, the grip is too thick; if there's no room for a finger, the grip is too thin. At the Israeli Tennis Center, we can measure your palm and fit you with the exact size.",
+      "new_p_197": "Choosing your first racket is your first step into the world of tennis. Don't be tempted to buy the most expensive racket or the one a famous player uses on TV. Focus on comfort, appropriate weight, and head size that will allow you to learn and enjoy. We invite you to come to us, feel the rackets in your hand, and receive personal and professional advice.",
+      "new_p_209": "Quality tennis equipment is a significant financial investment. Whether you're amateur or professional players, your racket, shoes, and bag are the tools that enable you to play and succeed. Many of the customers who come to the Israeli Tennis Center ask us how to extend the life of equipment and maintain its performance over time. The answer lies in regular maintenance and attention to small details.",
+      "new_p_210": "In this article, we've compiled several essential tips that will help you keep your equipment in excellent condition, save money on frequent replacements, and ensure you always step onto the court with the best tools.",
+      "new_p_212": "Enemy number one of tennis equipment, especially strings and frame, is heat. Leaving your racket in the car on a hot Israeli summer day is a recipe for disaster. The intense heat causes the racket frame (usually made of graphite and composite materials) to expand and deform at micro-levels, and the strings to lose their tension quickly. The result is a racket that feels 'dead' and less responsive.",
+      "new_p_213": "Our recommendation: always take the bag with you. Don't leave it in the trunk. At home, store the equipment in a shaded and cool place. Using an insulated tennis bag (with thermal lining) can help protect the equipment on your way to and from the court.",
+      "new_p_215": "The grip is your only point of contact with the racket. A worn, dirty, or slippery grip not only hurts your game but also forces you to hold the racket too tightly, leading to forearm muscle fatigue and injuries. There's no need to wait for the grip to completely fall apart. The moment you feel that the grip isn't stable or doesn't absorb sweat properly - replace it.",
+      "new_p_216": "It's recommended to use a thin and cheap Overgrip (top grip tape) that can be replaced frequently, thus preserving the racket's base grip for years. At a tennis equipment store in Israel, you can find a variety of grip types in different thicknesses and textures.",
+      "new_p_218": "Many players only replace strings when they break. This is a mistake. Strings lose their flexibility and tension (Tension Loss) long before they physically break. 'Dead' strings transmit more shock to the hand and hurt ball control. A common rule of thumb is to replace strings as many times as you play per week (for example, if you play 3 times a week, replace strings 3 times a year).",
+      "new_p_219": "At the Israeli Tennis Center, we offer professional stringing service that will restore the liveliness and power your racket has lost. Don't neglect the strings – they are the engine of your racket.",
+      "new_p_221": "Proper equipment care is an integral part of being tennis players. Maintaining your racket, replacing grips on time, and protecting from the sun will ensure better performance and financial savings over time. Do you have additional questions about maintenance? Our team is always here to serve you.",
+      "new_p_233": "When entering a sports store, it's easy to get confused by the enormous range of prices. Why does one racket cost 250 NIS and another, which looks quite similar, costs 1,200 NIS? Is it just about branding and marketing, or are there fundamental differences that will affect your game? At the Israeli Tennis Center, we believe it's important for customers to understand exactly what they're paying for.",
+      "new_p_234": "The differences between recreational equipment and performance equipment are significant and relate to materials, manufacturing technology, and precision levels. Let's dive deep and understand the main differences.",
+      "new_p_236": "The most significant difference is the material the racket is made from. Cheap beginner rackets are usually made of aluminum or simple alloy. These are very durable and cheap to manufacture rackets, but they transmit strong vibrations to the hand, are relatively heavier, and lack 'feel'. They're excellent for children just starting out or for those who play once a month.",
+      "new_p_237": "In contrast, professional rackets are made from carbon fiber (graphite) and advanced composite materials (like Graphene, Kevlar, and more). These materials are amazingly light and strong. They allow manufacturers to control with great precision the stiffness and flexibility levels of the racket in different areas, giving the player power, control, and vibration absorption at a completely different level.",
+      "new_p_239": "Professional equipment involves extensive research and development. New technologies are designed to improve the racket's stability when hitting the ball. When a tennis ball hits the racket at high speed, the racket tends to rotate in the hand (torque moment). Professional rackets are designed to resist this twisting, allowing for more accurate shots even when the hit isn't in the center of the racket.",
+      "new_p_240": "Additionally, the dampening systems in professional rackets are built into the handle and frame, protecting the player's joints over time. For a player who plays several times a week, this protection is critical for injury prevention.",
+      "new_p_242": "The answer depends on your playing frequency and goals. If you play once every two weeks for fun, an intermediate racket will do an excellent job. But if you plan to play regularly, take lessons, and improve, investing in professional equipment (or at least quality 'Club Player' equipment) pays off. The equipment will last longer, protect your body, and allow you to reach your full potential.",
+      "new_p_244": "The difference between equipment isn't just in price, but in the overall playing experience. We invite you to visit our store, consult with experts, and maybe even take a demo racket for a trial. Only when you feel the difference in your hands will you understand how much the right equipment can upgrade your game.",
+      "new_p_262": "Tennis is one of the most dynamic sports there is. The game requires sharp movements, sudden stops, lateral jumps and short sprint runs. Within all this intense activity, the most important equipment protecting your body is not the racket, but the shoes. At the Israeli Tennis Center we meet players daily who invest a fortune in rackets, but neglect choosing the right shoes – a mistake that can lead to injuries and impaired performance.",
+      "new_p_263": "Choosing the right tennis shoe is critical for stability on the court, preventing sprains and protecting the knees and back. Whether you're beginner or professional players, the following guide will help you understand what to look for when you enter a tennis equipment store in Israel.",
+      "new_p_265": "The first and most important parameter in choosing a shoe is the type of court you play on most of the time. Each surface has different requirements from the sole:",
+      "new_p_270": "When you visit the Israeli Tennis Center or any professional store, you'll notice that tennis shoes are usually divided into two main categories: shoes that focus on stability and shoes that focus on speed.",
+      "new_p_271": "Stability shoes: Will usually be heavier and more massive. They are designed for players who need maximum ankle support, or for physical and strong players who move a lot on the baseline. They provide great confidence in lateral movements.",
+      "new_p_272": "Speed shoes: Lightweight, more flexible and breathable shoes. They suit players who want to feel \"close to the court\" and move at top speed. The downside is that sometimes they wear out faster and provide less ankle support.",
+      "new_p_274": "Many make the mistake of buying tennis shoes in the same size as their walking shoes. In tennis, the foot tends to swell slightly during play, and movements include strong stops. Therefore, the rule of thumb is to leave a gap of about half a centimeter to a centimeter between the big toe and the shoe's end.",
+      "new_p_275": "If your toes touch the shoe's end when measuring in the store, it will hurt a lot during play. Additionally, it's important to pay attention to the shoe's width. Different brands manufacture lasts in different widths. Don't compromise on a tight shoe hoping it will stretch – a tennis shoe should be comfortable from the first moment.",
+      "new_p_277": "Professional tennis equipment is designed to last, but every shoe has an expiration date. Clear signs for replacement include sole wear to the point where grooves disappear (causing dangerous slipping), or when you feel the shoe has lost its shock absorption ability and knees start hurting after training.",
+      "new_p_278": "An average player who plays twice a week will need to replace shoes every 4-6 months. Competitive players replace at a much higher frequency.",
+      "new_p_280": "Your feet are the most important tool on the court. Don't underestimate choosing the right shoe. We invite you to come to the tennis equipment store in Israel at our complex, consult with the experts at the Israeli Tennis Center, and try on various models to find the perfect pair that will improve your game and maintain your health.",
       "about_h1_1": "Our Story - Tradition, Excellence and Commitment",
       "about_h2_2": "Our Journey in the World of Tennis",
       "about_h2_3": "The Values That Guide Us",
@@ -2020,6 +2343,28 @@ html[dir="rtl"] body {
       "home_h3_20": "Guaranteed Quality",
       "home_h3_21": "Personal Service",
       "home_h3_22": "Tradition and Heritage",
+      "new_h1_160": "Israeli Tennis Magazine",
+      "new_h1_182": "How to Choose Your First Tennis Racket: The Complete Guide for Beginners",
+      "new_h1_206": "Tips for Maintaining Your Tennis Equipment Over Time",
+      "new_h1_230": "Amateur Equipment vs Professional Equipment: What's Really the Difference?",
+      "new_h1_259": "How to Choose Tennis Shoes - The Complete Player's Guide",
+      "new_h2_174": "Want to Consult with Our Experts?",
+      "new_h2_187": "Racket Weight: Lighter Isn't Always Better",
+      "new_h2_190": "Head Size: Forgiving Hitting Area",
+      "new_h2_193": "Grip Size: Comfort in Your Hands",
+      "new_h2_196": "Summary",
+      "new_h2_211": "Protect Your Racket from Extreme Temperatures",
+      "new_h2_214": "Replacing Grip (Grip Tape) on Time",
+      "new_h2_217": "Re-stringing",
+      "new_h2_220": "Summary",
+      "new_h2_235": "Materials: Aluminum vs Graphite",
+      "new_h2_238": "Technology and Stability",
+      "new_h2_241": "Is It Worth the Investment?",
+      "new_h2_243": "Summary",
+      "new_h2_264": "1. Matching the Surface Type",
+      "new_h2_269": "2. Stability vs. Weight",
+      "new_h2_273": "3. Size and Foot Fit",
+      "new_h2_276": "When to Replace Shoes?",
       "new_h3_115": "Subheading",
       "new_h3_117": "Noam Avigdor",
       "new_h3_119": "Katy Bardugo",
@@ -2027,6 +2372,13 @@ html[dir="rtl"] body {
       "new_h3_123": "Hadar Friedman&nbsp;",
       "new_h3_125": "Michael Krinitsky",
       "new_h3_127": "Orit Shalom",
+      "new_h3_163": "How to Choose Tennis Shoes - Professional Guide",
+      "new_h3_167": "Maintaining Tennis Equipment Over Time",
+      "new_h3_171": "Amateur Equipment vs Professional Equipment",
+      "new_h3_279": "Summary and Recommendation",
+      "new_li_266": "Hard Courts: This is the most common surface in Israel. Shoes for hard courts must be very durable, with a strong sole that will withstand the high wear of concrete and asphalt. They provide excellent cushioning for shock absorption.",
+      "new_li_267": "Clay Courts: The sole of clay shoes is designed in a \"herringbone\" pattern (full zigzag) to prevent clay accumulation in the grooves and allow controlled sliding to the ball.",
+      "new_li_268": "Grass Courts: Rarer in Israel, but requires a sole with small studs for maximum grip on the slippery surface.",
       "terms_h1_1": "Terms of Use",
       "terms_h2_2": "1. Definitions",
       "terms_h2_3": "2. Service Description",
@@ -2153,6 +2505,23 @@ html[dir="rtl"] body {
       "home_link_51": "Accessibility",
       "home_link_52": "Terms of Use",
       "home_link_53": "Zappy",
+      "new_span_162": "Guides",
+      "new_span_166": "Tips",
+      "new_span_170": "Professional",
+      "new_span_181": "Share on:",
+      "new_span_183": "📅 October 15, 2023",
+      "new_span_184": "⏱️ 4 minute read",
+      "new_span_198": "Share on:",
+      "new_span_205": "Share on:",
+      "new_span_207": "📅 October 22, 2023",
+      "new_span_208": "⏱️ 5 minute read",
+      "new_span_222": "Share on:",
+      "new_span_229": "Share on:",
+      "new_span_231": "📅 October 29, 2023",
+      "new_span_232": "⏱️ 6 minute read",
+      "new_span_245": "Share on:",
+      "new_span_260": "📅 Published: May 25, 2024",
+      "new_span_261": "⏱️ Reading time: 5 minutes",
       "privacy_h1_1": "Privacy Policy",
       "privacy_h2_2": "1. Information Collection",
       "privacy_h2_3": "2. Use of Information",
@@ -2811,6 +3180,8 @@ html[dir="rtl"] body {
       if (ctaContainer && el.parentElement === ctaContainer.parentElement) {
         // Move lang-switcher as first child of CTA container
         ctaContainer.insertBefore(el, ctaContainer.firstChild);
+        // Ensure vertical alignment when lang-switcher and CTA button are siblings
+        ctaContainer.style.setProperty('align-items', 'center', 'important');
       }
       // Clear any margin overrides
       el.style.removeProperty('margin-left');

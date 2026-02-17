@@ -1,6 +1,4 @@
-# מרכז הטניס הישראלי — Generative Engine Optimization Map
-
-> A ספורט וציוד ספורטיבי business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -22,6 +20,26 @@ https://israel-tennis-center.zappy5.app/about
 https://israel-tennis-center.zappy5.app/contact
 צור קשר עם מרכז הטניס הישראלי - נשמח לעזור לך למצוא את ציוד הטניס המקצועי המושלם. פנה אלינו לייעוץ, שאלות או לקביעת פגישה.
 
+### הבלוג שלנו - מרכז הטניס הישראלי
+https://israel-tennis-center.zappy5.app/blog
+קראו מאמרים מקצועיים, טיפים ומדריכים בנושא טניס, ציוד ספורט ושיפור המשחק שלכם ממומחי מרכז הטניס הישראלי.
+
+### למתחילים
+https://israel-tennis-center.zappy5.app/blog/beginners-guide
+מדריך מקיף לבחירת מחבט טניס למתחילים. גלו מהם הפרמטרים החשובים כמו משקל, גודל ראש וידית אחיזה לפני הרכישה.
+
+### תחזוקה
+https://israel-tennis-center.zappy5.app/blog/maintenance-tips
+למדו כיצד לשמור על מחבט הטניס והציוד שלכם. טיפים מקצועיים להארכת חיי הגידים, החלפת גריפ ושמירה על המחבט בתנאי מזג אוויר שונים.
+
+### מקצועי
+https://israel-tennis-center.zappy5.app/blog/pro-vs-amateur
+סקירה מעמיקה של ההבדלים בין ציוד טניס חובבני לציוד מקצועי. טכנולוגיות, חומרים והשפעה על הביצועים במגרש.
+
+### בחירת נעלי טניס
+https://israel-tennis-center.zappy5.app/blog/tennis-shoes-guide
+המדריך המלא לבחירת נעלי טניס מתאימות. למדו על התאמה למשטח, מבנה כף הרגל וחשיבות היציבות. מוגש על ידי מומחי מרכז הטניס הישראלי.
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -40,16 +58,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About מרכז הטניס הישראלי
-מרכז הטניס הישראלי is a business in the ספורט וציוד ספורטיבי industry.
-
-## Target Audience
-- שחקני טניס נלהבים
-- הורים לילדים מוכשרים בטניס
-
-## Industry
-ספורט וציוד ספורטיבי
-
+## About Business
 ---
 
 # Additional Resources
