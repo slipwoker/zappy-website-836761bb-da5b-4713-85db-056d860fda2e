@@ -3205,15 +3205,14 @@ html[dir="rtl"] body {
       var key = el.getAttribute('data-i18n');
       var translation = zappyI18n.t(key);
       if (translation && translation !== key) {
-        // Check if translation contains newlines or HTML formatting tags
         var hasNewlines = translation.indexOf(newlineChar) !== -1;
         var hasHtmlTags = htmlTagPattern.test(translation);
+        var hasEntities = /&[a-zA-Z]+;|&#\d+;|&#x[0-9a-fA-F]+;/.test(translation);
+        var elementHasBr = /<br\s*\/?>/i.test(el.innerHTML);
         
-        if (hasNewlines || hasHtmlTags) {
-          // Convert newlines to <br> and use innerHTML to preserve HTML formatting
+        if (hasNewlines || hasHtmlTags || hasEntities || elementHasBr) {
           el.innerHTML = translation.split(newlineChar).join('<br>');
         } else {
-          // No HTML content, use textContent for safety
           el.textContent = translation;
         }
       }
