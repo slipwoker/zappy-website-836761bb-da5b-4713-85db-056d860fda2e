@@ -182,6 +182,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://israel-tennis-center.zappy5.app/contact" />
   </url>
   <url>
+    <loc>https://israel-tennis-center.zappy5.app/level-1-tennis</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://israel-tennis-center.zappy5.app/level-1-tennis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://israel-tennis-center.zappy5.app/en/level-1-tennis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://israel-tennis-center.zappy5.app/level-1-tennis" />
+  </url>
+  <url>
+    <loc>https://israel-tennis-center.zappy5.app/en/level-1-tennis</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://israel-tennis-center.zappy5.app/level-1-tennis" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://israel-tennis-center.zappy5.app/en/level-1-tennis" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://israel-tennis-center.zappy5.app/level-1-tennis" />
+  </url>
+  <url>
     <loc>https://israel-tennis-center.zappy5.app/privacy</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>monthly</changefreq>
