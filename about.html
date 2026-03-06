@@ -4990,7 +4990,7 @@ html[dir="rtl"] body {
       "home_p_41": "אנחנו אוהבים טניס – וגם רוצים שאתם תאהבו אותו! במרכז הטניס הישראלי מאמינים שכל אחד, גדול או קטן, יכול ללמוד, להתפתח ולהנות מהמשחק. אנחנו משלבים את הערכים הכי חשובים בספורט – כמו השתדלות, חברות וחיוך – עם הציוד המשוכלל ביותר שיש.",
       "home_p_42": "בחנות שלנו תמצאו המון דברים מגניבים – מחבטים צבעוניים, כדורים, ציוד לאימון ועוד! יש לנו משהו לכולם, בין אם אתם מתחילים לראשונה ובין אם אתם כבר שחקנים מנוסים. כל מוצר נבחר עם אהבה כדי שתוכלו ליהנות מהמשחק בצורה הטובה ביותר.",
       "home_p_43": "מיתור מדויק על ידי טכנאים מוסמכים עם ניסיון של שנים. אנו משתמשים במיתרים איכוtiים ביותר ומתאימים את המתח בדיוק לסגנון המשחק שלך.",
-      "home_p_44": "התמחות במחבטי טניס לילדים מתחילים - בחירה קפדנית של מחבטים קלים, בגדלים מתאימים ועם נקודת איזון מושלמת לפיתוח טכניקה נכונה מגיל צעיר.",
+      "home_p_44": "התמחות במחבטי טניס לילדים מתחילים - בחירה קפדנית של מחבטים קלים, בגדלים מתאימים ועם נקודת איזון מושלמת לפיתוח טכניקה נכונה מגיל צעיר. החבטות שלי עכשיו נהיו מדהימות.",
       "home_p_45": "צוות המומחים שלנו מספק ייעוץ אישי לבחירת ציוד טניס מקצועי המתאים בדיוק לרמת המשחק, סגנון המשחק והיעדים האישיים של כל שחקן.",
       "home_p_46": "צוות המומחים שלנו מספק ייעוץ אישי לבחירת ציוד טניס מקצועי המתאים בדיוק לרמת המשחק, סגנון המשחק והיעדים האישיים של כל שחקן.",
       "home_p_47": "צוות המומחים שלנו מספק ייעוץ אישי לבחירת ציוד טניס מקצועי המתאים בדיוק לרמת המשחק, סגנון המשחק והיעדים האישיים של כל שחקן.",
@@ -5009,7 +5009,7 @@ html[dir="rtl"] body {
       "home_p_60": "שילוב ייחודי של מסורת קלאסית עם טכנולוגיה מודרנית - אנו שומרים על ערכי הספורט תוך שימוש בחדשנות העדכנית.",
       "home_p_61": "בואו לבקר אותנו במרכז הטניס הישראלי ותגלו מדוע אנחנו חנות ציוד טניס בישראל המובילה. הצוות המקצועי שלנו ממתין לעזור לכם למצוא את הציוד המושלם.",
       "home_p_62": "© 2026 מרכז הטניס הישראלי. כל הזכויות שמורות.",
-      "home_p_63": "נוצר באמצעות&amp;nbsp;Zappy",
+      "home_p_63": "נוצר באמצעות&nbsp;Zappy",
       "new_a_144": "טניס רמה 1",
       "new_a_146": "טניס רמה 1",
       "new_a_148": "טניס רמה 1",
@@ -6054,7 +6054,7 @@ html[dir="rtl"] body {
       "home_p_41": "We love tennis – and we want you to love it too! At the Israeli Tennis Center, we believe that everyone, young or old, can learn, develop and enjoy the game. We combine the most important values in sports – like effort, friendship and smiles – with the most advanced equipment available.",
       "home_p_42": "In our store you'll find tons of cool stuff – colorful rackets, balls, training equipment and more! We have something for everyone, whether you're a complete beginner or already an experienced player. Every product is chosen with love so you can enjoy the game in the best possible way.",
       "home_p_43": "Precise stringing by certified technicians with years of experience. We use the highest quality strings and adjust the tension precisely to your playing style.",
-      "home_p_44": "Specializing in tennis rackets for beginner children - careful selection of lightweight rackets, in appropriate sizes and with perfect balance point for developing proper technique from a young age.",
+      "home_p_44": "Specializing in tennis rackets for beginner children - careful selection of lightweight rackets, in appropriate sizes and with perfect balance point for developing proper technique from a young age. My shots have now become amazing.",
       "home_p_45": "Our team of experts provides personal consultation for selecting professional tennis equipment that precisely matches each player's playing level, playing style and personal goals.",
       "home_p_46": "Our team of experts provides personal consultation for selecting professional tennis equipment that precisely matches each player's playing level, playing style and personal goals.",
       "home_p_47": "Our team of experts provides personal consultation for selecting professional tennis equipment that precisely matches each player's playing level, playing style and personal goals.",
@@ -7254,6 +7254,27 @@ html[dir="rtl"] body {
     document.querySelectorAll('.legal-content, .terms-content, .privacy-content').forEach(function(el) {
       el.style.direction = newDir;
       el.style.textAlign = isRTL ? 'right' : 'left';
+    });
+    
+    // Swap inline text-align on content elements when direction changes.
+    // RTL-primary sites have text-align:right baked into inline styles;
+    // these must become text-align:left when viewing in LTR, and vice versa.
+    var defaultIsRTL = rtlLanguages.includes('he');
+    var needsSwap = isRTL !== defaultIsRTL;
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.closest('header') || el.closest('nav') || el.closest('.navbar') || el.closest('.lang-switcher')) return;
+      if (el.closest('.legal-content') || el.closest('.terms-content') || el.closest('.privacy-content')) return;
+      var ta = el.style.textAlign;
+      if (!ta || ta === 'center' || ta === 'justify' || ta === 'start' || ta === 'end') return;
+      if (!el.hasAttribute('data-ta-orig')) {
+        el.setAttribute('data-ta-orig', ta);
+      }
+      var origTA = el.getAttribute('data-ta-orig');
+      if (needsSwap) {
+        el.style.textAlign = origTA === 'right' ? 'left' : 'right';
+      } else {
+        el.style.textAlign = origTA;
+      }
     });
     
     // Update catalog menu RTL class to match current direction
