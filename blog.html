@@ -4653,6 +4653,7 @@ html[dir="rtl"] body {
 
 
 
+
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
@@ -4998,7 +4999,7 @@ html[dir="rtl"] body {
       "home_link_65": "התחל את המסע שלך",
       "home_link_66": "לחץ כאן",
       "home_link_67": "לחץ כאן",
-      "home_link_68": "לחץ כאן",
+      "home_link_68": "טניס זה החיים",
       "home_link_69": "צור קשר עכשיו",
       "home_link_70": "מדיניות פרטיות",
       "home_link_71": "נגישות",
@@ -6062,7 +6063,7 @@ html[dir="rtl"] body {
       "home_link_65": "Start your journey",
       "home_link_66": "Click here",
       "home_link_67": "Click here",
-      "home_link_68": "Click here",
+      "home_link_68": "Tennis is Life",
       "home_link_69": "Contact now",
       "home_link_70": "Privacy policy",
       "home_link_71": "Accessibility",
@@ -6984,7 +6985,37 @@ html[dir="rtl"] body {
         el.style.textAlign = origTA;
       }
     });
-    
+
+    // Swap text-align in CSS stylesheet rules when direction changes.
+    // CSS rules with text-align:right (from RTL-primary generation) must become
+    // text-align:left when viewing in LTR, and vice versa.
+    if (!window.__zappyOrigTA) window.__zappyOrigTA = new WeakMap();
+    var origTAMap = window.__zappyOrigTA;
+    for (var si = 0; si < document.styleSheets.length; si++) {
+      try {
+        var sheetRules = document.styleSheets[si].cssRules;
+        for (var ri = 0; ri < sheetRules.length; ri++) {
+          var cssRule = sheetRules[ri];
+          if (!cssRule.style || !cssRule.selectorText) continue;
+          var rta = cssRule.style.textAlign;
+          if (!rta || rta === 'center' || rta === 'justify' || rta === 'start' || rta === 'end') continue;
+          if (cssRule.selectorText.indexOf('[dir=') !== -1) continue;
+          if (/direction\s*:/i.test(cssRule.cssText)) continue;
+          if (/^(html|body)\s*,?\s*(html|body)?\s*$/.test(cssRule.selectorText.trim())) continue;
+          if (/\.(lang-option|lang-switcher|mobile-lang)/.test(cssRule.selectorText)) continue;
+          if (!origTAMap.has(cssRule)) {
+            origTAMap.set(cssRule, rta);
+          }
+          var origRTA = origTAMap.get(cssRule);
+          if (needsSwap) {
+            cssRule.style.textAlign = origRTA === 'right' ? 'left' : 'right';
+          } else {
+            cssRule.style.textAlign = origRTA;
+          }
+        }
+      } catch(e) {}
+    }
+
     // Update catalog menu RTL class to match current direction
     // This is critical for e-commerce sites with category navigation
     document.querySelectorAll('.zappy-catalog-menu').forEach(function(el) {
