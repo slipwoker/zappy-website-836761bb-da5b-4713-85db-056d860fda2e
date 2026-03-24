@@ -5232,7 +5232,7 @@ html[dir="rtl"] body {
       "services_h2_9": "שירותים נוספים",
       "services_p_35": "Happily created by&nbsp;Zappy",
       "services_p_36": "מרכז הטניס הישראלי מציע מגוון רחב של שירותים מקצועיים המותאמים לצרכים הייחודיים של כל שחקן. בין אם אתם שחקני טניס נלהבים המחפשים ציוד טניס מקצועי ברמה הגבוהה ביותר, או הורים המעוניינים למצוא מחבטי טניס לילדים מתחילים - אנחנו כאן כדי לעזור.",
-      "services_p_37": "כחנות ציוד טניס בישראל המובילה, אנו משלבים מסורת קלאסית עם שירות מודרני ומקצועי. הצוות המנוסה שלנו מביא שנים של ניסיון בתחום הטניס ומתמחה בהתאמה אישית של ציוד ופתרונות לכל רמת משחק.",
+      "services_p_37": "כחנות ציוד טניס בישראל המובילה, אנו משלבים מסורת קלאסית עם שירות מודרני ומקצועי. הצוות המנוסה שלנו מביא שנים של ניסיון בתחום הטניס ומתמחה בהתאמה אישית של ציוד ופתרונות לכל רמת משחק מותאמת אישית",
       "services_p_38": "שירות המיתור שלנו הוא אחד המקצועיים והמדויקים ביותר בישראל. אנו משתמשים במכונות מיתור מתקדמות ובמיתרים איכותיים מהמותגים המובילים בעולם. הטכנאים המוסמכים שלנו עוברים הכשרה מתמדת ומתעדכנים בטכנולוגיות החדשות ביותר.",
       "services_p_39": "שירות המיתור שלנו הוא אחד המקצועיים והמדויקים ביותר בישראל. אנו משתמשים במכונות מיתור מתקדמות ובמיתרים איכותיים מהמותגים המובילים בעולם. הטכנאים המוסמכים שלנו עוברים הכשרה מתמדת ומתעדכנים בטכנולוגיות החדשות ביותר.",
       "services_p_40": "אנו מתמחים במחבטי טניס לילדים מתחילים ומבינים את החשיבות של בחירת הציוד הנכון לגיל ולשלב ההתפתחות. מחבט שאינו מתאים יכול לפגוע בטכניקה ולהוביל לפציעות, בעוד שמחבט נכון יעזור לילד לפתח בסיס חזק למשחק עתידי.",
@@ -6296,7 +6296,7 @@ html[dir="rtl"] body {
       "services_h2_9": "Additional Services",
       "services_p_35": "Happily created by&nbsp;Zappy",
       "services_p_36": "The Israeli Tennis Center offers a wide range of professional services tailored to the unique needs of every player. Whether you are passionate tennis players looking for the highest quality professional tennis equipment, or parents interested in finding tennis rackets for beginner children - we are here to help.",
-      "services_p_37": "As Israel's leading tennis equipment store, we combine classic tradition with modern and professional service. Our experienced team brings years of experience in the tennis field and specializes in personal fitting of equipment and solutions for every playing level.",
+      "services_p_37": "As Israel's leading tennis equipment store, we combine classic tradition with modern and professional service. Our experienced team brings years of experience in the tennis field and specializes in personal customization of equipment and solutions for every skill level with personalized adaptation",
       "services_p_38": "Our stringing service is one of the most professional and precise in Israel. We use advanced stringing machines and quality strings from the world's leading brands. Our certified technicians undergo continuous training and stay updated with the latest technologies.",
       "services_p_39": "Our stringing service is one of the most professional and precise in Israel. We use advanced stringing machines and quality strings from the world's leading brands. Our certified technicians undergo continuous training and stay updated with the latest technologies.",
       "services_p_40": "We specialize in tennis rackets for beginner children and understand the importance of choosing the right equipment for age and developmental stage. An unsuitable racket can damage technique and lead to injuries, while the right racket will help the child develop a strong foundation for future play.",
@@ -6982,6 +6982,27 @@ html[dir="rtl"] body {
         // (e.g., <li data-i18n="key1"><a data-i18n="key2">text</a></li>)
         // Setting textContent/innerHTML on the parent would destroy child elements.
         if (el.querySelector('[data-i18n]')) return;
+
+        // Preserve child SVGs (e.g., decorative dropdown arrows in nav links)
+        // by only replacing direct text nodes instead of overwriting all content.
+        if (el.querySelector('svg')) {
+          var nodes = el.childNodes;
+          var textUpdated = false;
+          for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].nodeType === 3 && nodes[i].textContent.trim()) {
+              if (!textUpdated) {
+                nodes[i].textContent = translation;
+                textUpdated = true;
+              } else {
+                nodes[i].textContent = '';
+              }
+            }
+          }
+          if (!textUpdated) {
+            el.insertBefore(document.createTextNode(translation), el.firstChild);
+          }
+          return;
+        }
 
         var hasNewlines = translation.indexOf(newlineChar) !== -1;
         var hasHtmlTags = htmlTagPattern.test(translation);
