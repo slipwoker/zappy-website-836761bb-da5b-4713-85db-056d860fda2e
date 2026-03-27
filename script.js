@@ -628,6 +628,33 @@ window.onload = function() {
       var widthMode = wrapper.getAttribute('data-zappy-zoom-wrapper-width-mode');
       if (widthMode === 'full') return;
 
+      var isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        img.style.setProperty('position', 'relative', 'important');
+        img.style.setProperty('width', '100%', 'important');
+        img.style.setProperty('height', 'auto', 'important');
+        img.style.setProperty('max-width', '100%', 'important');
+        img.style.setProperty('display', 'block', 'important');
+        img.style.setProperty('object-fit', 'cover', 'important');
+        img.style.removeProperty('left');
+        img.style.removeProperty('top');
+        img.style.setProperty('margin', '0', 'important');
+        return;
+      }
+
+      // Desktop: if the image already has zoom styles saved from the editor
+      // (position:absolute + percentage-based width), trust them.
+      // The saved percentages are proportional and correct for any container size,
+      // since zoom/crop math is based purely on aspect ratios.
+      // Recalculating here can produce different values when the container
+      // dimensions differ between preview and deployed site.
+      var existingPos = (img.style.position || '').replace(/s*!importants*/g, '').trim();
+      var existingW = (img.style.width || '').replace(/s*!importants*/g, '').trim();
+      if (existingPos === 'absolute' && existingW.indexOf('%') !== -1) {
+        return;
+      }
+
+      // Image lacks saved zoom styles — calculate from scratch
       var rect = wrapper.getBoundingClientRect();
       if (!rect || !rect.width || !rect.height) return;
 
@@ -655,27 +682,15 @@ window.onload = function() {
       var leftPct = (100 - wPct) * (pos.x / 100);
       var topPct = (100 - hPct) * (pos.y / 100);
 
-      var isMobile = window.innerWidth <= 768;
-      if (isMobile) {
-        img.style.setProperty('position', 'relative', 'important');
-        img.style.setProperty('width', '100%', 'important');
-        img.style.setProperty('height', 'auto', 'important');
-        img.style.setProperty('max-width', '100%', 'important');
-        img.style.setProperty('display', 'block', 'important');
-        img.style.setProperty('object-fit', 'cover', 'important');
-        img.style.removeProperty('left');
-        img.style.removeProperty('top');
-      } else {
-        img.style.setProperty('position', 'absolute', 'important');
-        img.style.setProperty('left', leftPct + '%', 'important');
-        img.style.setProperty('top', topPct + '%', 'important');
-        img.style.setProperty('width', wPct + '%', 'important');
-        img.style.setProperty('height', hPct + '%', 'important');
-        img.style.setProperty('max-width', 'none', 'important');
-        img.style.setProperty('max-height', 'none', 'important');
-        img.style.setProperty('display', 'block', 'important');
-        img.style.setProperty('object-fit', zoom < 1 ? 'fill' : 'cover', 'important');
-      }
+      img.style.setProperty('position', 'absolute', 'important');
+      img.style.setProperty('left', leftPct + '%', 'important');
+      img.style.setProperty('top', topPct + '%', 'important');
+      img.style.setProperty('width', wPct + '%', 'important');
+      img.style.setProperty('height', hPct + '%', 'important');
+      img.style.setProperty('max-width', 'none', 'important');
+      img.style.setProperty('max-height', 'none', 'important');
+      img.style.setProperty('display', 'block', 'important');
+      img.style.setProperty('object-fit', zoom < 1 ? 'fill' : 'cover', 'important');
       img.style.setProperty('margin', '0', 'important');
     }
 
@@ -1114,6 +1129,10 @@ window.onload = function() {
             if (!ch || !ch.tagName) continue;
             var tag = ch.tagName.toLowerCase();
             if (tag === 'script' || tag === 'style') continue;
+            if (ch.getAttribute('aria-hidden') === 'true') continue;
+            if (ch.getAttribute('data-zappy-internal') === 'true') continue;
+            var pos = window.getComputedStyle(ch).position;
+            if (pos === 'absolute' || pos === 'fixed') continue;
             items.push(ch);
           }
           var totalItems = items.length;
@@ -1121,6 +1140,8 @@ window.onload = function() {
 
           var cs = window.getComputedStyle(container);
           if (cs.display !== 'grid') continue;
+          var gta = (cs.gridTemplateAreas || '').trim();
+          if (gta && gta !== 'none') continue;
           var gtc = (cs.gridTemplateColumns || '').trim();
           if (!gtc || gtc === 'none') continue;
           var colWidths = gtc.split(' ').filter(function(v) { return v && parseFloat(v) > 0; });
