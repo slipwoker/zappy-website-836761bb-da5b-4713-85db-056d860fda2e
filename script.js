@@ -1326,8 +1326,19 @@ window.onload = function() {
       for (var g = 0; g < grids.length; g++) {
         try {
           var container = grids[g];
-          // Skip if already processed
-          if (container.getAttribute('data-zappy-grid-centered') === 'true') continue;
+
+          // Clear previous centering so we can recalculate (e.g. after i18n direction change)
+          if (container.getAttribute('data-zappy-grid-centered') === 'true') {
+            var prevItems = Array.from(container.children);
+            for (var p = 0; p < prevItems.length; p++) {
+              if (prevItems[p].getAttribute && prevItems[p].getAttribute('data-zappy-gc') === '1') {
+                prevItems[p].style.transform = prevItems[p].getAttribute('data-zappy-gc-orig') || '';
+                prevItems[p].removeAttribute('data-zappy-gc');
+                prevItems[p].removeAttribute('data-zappy-gc-orig');
+              }
+            }
+            container.removeAttribute('data-zappy-grid-centered');
+          }
 
           var items = [];
           for (var c = 0; c < container.children.length; c++) {
@@ -1364,19 +1375,13 @@ window.onload = function() {
           var missingCols = colCount - itemsInLastRow;
           var offset = missingCols * (colWidth + gap) / 2;
 
-          // Detect RTL
+          // Detect RTL — use the computed direction which already accounts for
+          // CSS cascade, html[dir], and inheritance. Do NOT walk up checking inline
+          // styles because multi-language sites may have stale direction:rtl on
+          // parent elements from the primary language while serving an LTR page.
           var dir = cs.direction || 'ltr';
-          var el = container;
-          while (el && dir === 'ltr') {
-            if (el.getAttribute && el.getAttribute('dir')) { dir = el.getAttribute('dir'); break; }
-            if (el.style && el.style.direction) { dir = el.style.direction; break; }
-            el = el.parentElement;
-          }
           var translateValue = dir === 'rtl' ? -offset : offset;
 
-          // Apply transform to last-row items
-          // Temporarily disable CSS transitions to prevent visible animation
-          // Preserve any existing transforms (e.g., scale, rotate) by composing
           var startIndex = totalItems - itemsInLastRow;
           var savedTransitions = [];
           for (var i = startIndex; i < totalItems; i++) {
@@ -1384,32 +1389,36 @@ window.onload = function() {
             savedTransitions.push(item.style.transition);
             item.style.transition = 'none';
             var existingTransform = item.style.transform || '';
+            item.setAttribute('data-zappy-gc-orig', existingTransform);
             var newTransform = existingTransform
               ? existingTransform + ' translateX(' + translateValue + 'px)'
               : 'translateX(' + translateValue + 'px)';
             item.style.transform = newTransform;
+            item.setAttribute('data-zappy-gc', '1');
           }
 
-          // Force synchronous reflow so the transform is applied instantly
           void container.offsetHeight;
 
-          // Restore original transitions
           for (var j = startIndex; j < totalItems; j++) {
             items[j].style.transition = savedTransitions[j - startIndex];
           }
 
-          // Mark grid as processed so we don't double-apply
           container.setAttribute('data-zappy-grid-centered', 'true');
         } catch(e) {}
       }
     }
 
-    // Run once after DOM is fully loaded (fonts, images, layout complete)
     if (document.readyState === 'complete') {
       centerPartialGridRows();
     } else {
       window.addEventListener('load', centerPartialGridRows);
     }
+
+    // Re-center when i18n script changes the page direction
+    try {
+      var dirObs = new MutationObserver(function() { centerPartialGridRows(); });
+      dirObs.observe(document.documentElement, { attributes: true, attributeFilter: ['dir'] });
+    } catch(e) {}
   } catch(e) {}
 })();
 
