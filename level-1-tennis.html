@@ -500,7 +500,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -784,7 +784,7 @@ html[dir="rtl"] body {
   
   /* Hide CTA button inside container on mobile */
   .nav-cta-container .nav-cta-btn,
-  .nav-cta-container &gt; a:not(.lang-option):not(.lang-switcher-current) {
+  .nav-cta-container > a:not(.lang-option):not(.lang-switcher-current) {
     display: none !important;
   }
   
@@ -806,7 +806,7 @@ html[dir="rtl"] body {
   .navbar .nav-cta-container .lang-switcher .lang-switcher-dropdown,
   .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
   .lang-switcher .lang-switcher-dropdown[style*="position"],
-  div.lang-switcher &gt; div.lang-switcher-dropdown[style],
+  div.lang-switcher > div.lang-switcher-dropdown[style],
   [class*="lang-switcher"] .lang-switcher-dropdown[style] {
     position: absolute !important;
     top: 100% !important;
@@ -897,9 +897,9 @@ html[dir="rtl"] body {
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &gt; .sub-menu,
-      nav li:hover &gt; .sub-menu,
-      .navbar li:hover &gt; .sub-menu {
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -1146,7 +1146,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -1714,7 +1714,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -2282,7 +2282,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -2850,7 +2850,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -3418,7 +3418,7 @@ div.lang-switcher-dropdown,
 .lang-switcher .lang-switcher-dropdown[style*="position:absolute"],
 .nav-cta-container .lang-switcher .lang-switcher-dropdown[style],
 .navbar .nav-cta-container .lang-switcher-dropdown[style],
-div.lang-switcher &gt; div.lang-switcher-dropdown[style] {
+div.lang-switcher > div.lang-switcher-dropdown[style] {
   position: absolute !important;
   top: 100% !important;
   /* Default LTR: align to left */
@@ -3795,8 +3795,8 @@ html[dir="rtl"] body {
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -3810,13 +3810,13 @@ html[dir="rtl"] body {
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -3825,7 +3825,7 @@ html[dir="rtl"] body {
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -3878,9 +3878,9 @@ html[dir="rtl"] body {
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -3918,8 +3918,8 @@ html[dir="rtl"] body {
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -3933,8 +3933,8 @@ html[dir="rtl"] body {
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -3975,18 +3975,18 @@ html[dir="rtl"] body {
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -4012,23 +4012,23 @@ html[dir="rtl"] body {
               }
               
               /* Parent link - takes most space, allows navigation */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 flex: 1 !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -4066,9 +4066,9 @@ html[dir="rtl"] body {
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
@@ -4088,10 +4088,10 @@ html[dir="rtl"] body {
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth > 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -4114,7 +4114,7 @@ html[dir="rtl"] body {
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -4174,7 +4174,7 @@ html[dir="rtl"] body {
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -4241,21 +4241,21 @@ html[dir="rtl"] body {
       </div>
       
       <button class="mobile-toggle" id="mobileToggle" aria-label="פתח תפריט">
-        <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
         </svg>
-        <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;">
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
           <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
         </svg>
       </button>
       
       <button class="phone-header-btn" aria-label="התקשר אלינו">
-        <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
       </button>
       
-      <ul class="nav-menu" id="navMenu"><li><a href="/services" data-i18n="home_nav_82">שירותים</a></li><li><a href="/about" data-i18n="home_nav_83">אודות</a></li><li><a href="/blog" class="nav-link" data-i18n="home_nav_84">בלוג</a><ul class="sub-menu"><li><a href="/blog/pro-vs-amateur" data-i18n="blog_pro_vs_amateur_page_title">ציוד חובבני מול ציוד מקצועי - מה ההבדלים?</a></li><li><a href="/blog/tennis-shoes-guide" data-i18n="blog_h3_6">איך לבחור נעלי טניס - מדריך מקצועי</a></li></ul></li><li class="menu-group-item"><span class="menu-group-title" data-i18n="new_span_165">טניס למתקדמים</span><ul class="sub-menu"><li><a href="/level-1-tennis" class="" data-i18n="new_a_166">טניס רמה 1</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact" data-i18n="blog_nav_37">צור קשר</a></li></ul>
+      <ul class="nav-menu" id="navMenu"><li><a href="/services" data-i18n="home_nav_82">שירותים</a></li><li><a href="/about" data-i18n="home_nav_83">אודות</a></li><li><a href="/blog" class="nav-link" data-i18n="home_nav_84">בלוג</a><ul class="sub-menu"><li><a href="/blog/pro-vs-amateur" data-i18n="blog_pro_vs_amateur_page_title">ציוד חובבני מול ציוד מקצועי - מה ההבדלים?</a></li><li><a href="/blog/tennis-shoes-guide" data-i18n="blog_h3_6">איך לבחור נעלי טניס - מדריך מקצועי</a></li></ul></li><li class="menu-group-item"><span class="menu-group-title" data-i18n="new_span_143">טניס למתקדמים</span><ul class="sub-menu"><li><a href="/level-1-tennis" class="" data-i18n="new_a_144">טניס רמה 1</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact" data-i18n="blog_nav_37">צור קשר</a></li></ul>
       
       
 
@@ -4263,9 +4263,9 @@ html[dir="rtl"] body {
 
 
 
-<div class="lang-switcher" data-no-icon-edit="true" data-icon-color="currentColor" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
-  <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:var(--color-text-dark, #1a1a1a);">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+<div class="lang-switcher" data-icon-color="currentColor" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
+  <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:var(--color-text-dark, #1a1a1a);">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
   </button>
   <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
     <button class="lang-option" data-lang="en" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</button>
@@ -4362,14 +4362,14 @@ html[dir="rtl"] body {
         var header = document.getElementById('zappy-attribution-header');
         if (header) {
           // Use dynamic announcement content if available
-          if (data.announcement &amp;&amp; data.announcement.html) {
+          if (data.announcement && data.announcement.html) {
             header.innerHTML = data.announcement.html;
           }
           // Apply fixed positioning styles inline (works for existing sites too)
           header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
           // Fix child elements that might have position: fixed from old CSS
           var children = header.querySelectorAll('*');
-          for (var i = 0; i &lt; children.length; i++) {
+          for (var i = 0; i < children.length; i++) {
             children[i].style.position = 'static';
           }
           // Get header height
@@ -4377,9 +4377,9 @@ html[dir="rtl"] body {
           // Find and fix navbar to be fixed as well (prevents gap at top of page)
           var navSelectors = ['nav', '.navbar', '.nav'];
           var navbar = null;
-          for (var j = 0; j &lt; navSelectors.length; j++) {
+          for (var j = 0; j < navSelectors.length; j++) {
             navbar = document.querySelector(navSelectors[j]);
-            if (navbar &amp;&amp; navbar.id !== 'zappy-attribution-header') break;
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
             navbar = null;
           }
           if (navbar) {
@@ -4398,6 +4398,12 @@ html[dir="rtl"] body {
 })();
 </script>
     
+
+
+
+
+
+
 
 
 
@@ -4511,7 +4517,7 @@ html[dir="rtl"] body {
       "blog_p_13": "צוות מרכז הטניס הישראלי זמין לכל שאלה. בואו לבקר בחנות או צרו איתנו קשר לייעוץ אישי והתאמת ציוד.",
       "blog_p_14": "© 2026 מרכז הטניס הישראלי. כל הזכויות שמורות.",
       "blog_p_15": "נוצר באמצעות&nbsp;Zappy",
-      "home_h1_1": "מרכז הטניס הישראלי - המקום שבו מתחילה המצוינות",
+      "home_h1_1": "מרכז הטניס הישראלי - המקום שבו מתחילה המצוינות האמיתית",
       "home_h2_2": "ברוכים הבאים למרכז הטניס הישראלי",
       "home_h2_3": "מסורת קלאסית עם מצוינות מודרנית",
       "home_h2_4": "השירותים המקצועיים שלנו",
@@ -4531,7 +4537,7 @@ html[dir="rtl"] body {
       "home_p_38": "שלום זה הטקסט החדש שאנחנו צריכים לבדוק אם הוא יהיה עריך",
       "home_p_39": "זה טקסט שהכנסתי חדש",
       "home_p_40": "טכניקה נכונה מההתחלה. ההורים שלנו סומכים עלינו להדריך את ילדיהם המוכשרים בבחירת הציוד המתאים ביותר\n\n\n&nbsp;לשלב ההתפתחות שלהם.\nבדיקת תרגום חדש",
-      "home_p_41": "אנחנו אוהבים טניס – וגם רוצים שאתם תאהבו אותו! במרכז הטניס הישראלי מאמינים שכל אחד, גדול או קטן, יכול ללמוד, להתפתח ולהנות מהמשחק. אנחנו משלבים את הערכים הכי חשובים בספורט – כמו השתדלות, חברות וחיוך – עם הציוד המשוכלל ביותר שיש.\n\n\nאין על טניס, זה ספורט מצוין שרק אלופים אמיתיים יכולים להבין\nבהחלט.\n\nהמאמנים שנו מתאימים את עצמם לכל הגילאים ועושים עבודה מדהימה עם כל מתלמד. התוצאות הן בהחלט מרשימות",
+      "home_p_41": "המאמנים שלנו הם הכי טובים במדינה והתלמידים פשוט עפים עליהם!״",
       "home_p_42": "בחנות שלנו תמצאו המון דברים מגניבים – מחבטים צבעוניים, כדורים, ציוד לאימון ועוד! יש לנו משהו לכולם, בין אם אתם מתחילים לראשונה ובין אם אתם כבר שחקנים מנוסים. כל מוצר נבחר עם אהבה כדי שתוכלו ליהנות מהמשחק בצורה הטובה ביותר.",
       "home_p_43": "מיתור מדויק על ידי טכנאים מוסמכים עם ניסיון של שנים. אנו משתמשים במיתרים איכוtiים ביותר ומתאימים את המתח בדיוק לסגנון המשחק שלך.",
       "home_p_44": "התמחות במחבטי טניס לילדים מתחילים - בחירה קפדנית של מחבטים קלים, בגדלים מתאימים ועם נקודת איזון מושלמת לפיתוח טכניקה נכונה מגיל צעיר. החבטות שלי עכשיו נהיו מדהימות.",
@@ -5575,7 +5581,7 @@ html[dir="rtl"] body {
       "blog_p_13": "The Israeli Tennis Center team is available for any question. Come visit our store or contact us for personal consultation and equipment fitting.",
       "blog_p_14": "© 2026 Israeli Tennis Center. All rights reserved.",
       "blog_p_15": "Created with&nbsp;Zappy",
-      "home_h1_1": "Israeli Tennis Center - Where Excellence Begins",
+      "home_h1_1": "Israeli Tennis Center - Where True Excellence Begins",
       "home_h2_2": "Welcome to the Israeli Tennis Center",
       "home_h2_3": "Classic Tradition with Modern Excellence",
       "home_h2_4": "Our Professional Services",
@@ -5595,7 +5601,7 @@ html[dir="rtl"] body {
       "home_p_38": "Hello this is the new text we need to check if it will be editable",
       "home_p_39": "This is new text I entered",
       "home_p_40": "Proper technique from the start. Our parents trust us to guide their talented children in choosing the most suitable equipment\n\n\n&nbsp;for their development stage.\nNew translation test",
-      "home_p_41": "We love tennis – and we want you to love it too! At the Israeli Tennis Center, we believe that everyone, young or old, can learn, develop and enjoy the game. We combine the most important values in sports – like effort, friendship and smiles – with the most advanced equipment available.\n\n\nThere's nothing like tennis, it's an excellent sport that only true champions can understand\nabsolutely.\n\nOur coaches adapt themselves to all ages and do amazing work with every student. The results are definitely impressive",
+      "home_p_41": "Our coaches are the best in the country and the students absolutely love them!\"",
       "home_p_42": "In our store you'll find tons of cool stuff – colorful rackets, balls, training equipment and more! We have something for everyone, whether you're a complete beginner or already an experienced player. Every product is chosen with love so you can enjoy the game in the best possible way.",
       "home_p_43": "Precise stringing by certified technicians with years of experience. We use the highest quality strings and adjust the tension precisely to your playing style.",
       "home_p_44": "Specializing in tennis rackets for beginner children - careful selection of lightweight rackets, in appropriate sizes and with perfect balance point for developing proper technique from a young age. My shots have now become amazing.",
